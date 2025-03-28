@@ -1,0 +1,82 @@
+{
+  "version": "2025.0",
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "sequential",
+          "data": {
+            "commands": [
+              {
+                "type": "named",
+                "data": {
+                  "name": "SetZeroPositionArm"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "SetZeroPositionElevator"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "MiddleSafePath"
+          }
+        },
+        {
+          "type": "sequential",
+          "data": {
+            "commands": [
+              {
+                "type": "named",
+                "data": {
+                  "name": "CoralAngleL2"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "CoralPositionL2"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "PlaceMiddleCoral"
+          }
+        },
+        {
+          "type": "parallel",
+          "data": {
+            "commands": [
+              {
+                "type": "named",
+                "data": {
+                  "name": "CoralDropOffL2"
+                }
+              },
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "MiddleMoveBackSafely"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "resetOdom": true,
+  "folder": "UsableAutos",
+  "choreoAuto": false
+}

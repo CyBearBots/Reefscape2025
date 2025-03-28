@@ -1,0 +1,25 @@
+{
+  "version": "2025.0",
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "path",
+          "data": {
+            "pathName": "MiddleSafePath"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "CoralDropOffL3"
+          }
+        }
+      ]
+    }
+  },
+  "resetOdom": true,
+  "folder": "FromMiddle",
+  "choreoAuto": false
+}

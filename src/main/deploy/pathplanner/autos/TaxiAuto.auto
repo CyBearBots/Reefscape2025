@@ -1,0 +1,44 @@
+{
+  "version": "2025.0",
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "named",
+          "data": {
+            "name": "ResetGyro"
+          }
+        },
+        {
+          "type": "parallel",
+          "data": {
+            "commands": [
+              {
+                "type": "named",
+                "data": {
+                  "name": "SetZeroPositionArm"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "SetZeroPositionElevator"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "TaxiPath"
+          }
+        }
+      ]
+    }
+  },
+  "resetOdom": true,
+  "folder": "NewAutos",
+  "choreoAuto": false
+}

@@ -1,0 +1,113 @@
+{
+  "version": "2025.0",
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "named",
+          "data": {
+            "name": "ResetGyro"
+          }
+        },
+        {
+          "type": "parallel",
+          "data": {
+            "commands": [
+              {
+                "type": "named",
+                "data": {
+                  "name": "SetZeroPositionArm"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "SetZeroPositionElevator"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "EL4Path1"
+          }
+        },
+        {
+          "type": "sequential",
+          "data": {
+            "commands": [
+              {
+                "type": "named",
+                "data": {
+                  "name": "ArmAngleL0"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "ElevatorPositionL4"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "ArmAngleL4"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "EL4Path2"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "ArmAngleL4Place"
+          }
+        },
+        {
+          "type": "parallel",
+          "data": {
+            "commands": [
+              {
+                "type": "named",
+                "data": {
+                  "name": "CoralEject"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "sequential",
+          "data": {
+            "commands": [
+              {
+                "type": "named",
+                "data": {
+                  "name": "ArmAngleL0"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "ElevatorPositionL0"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "resetOdom": true,
+  "folder": "NewAutos",
+  "choreoAuto": false
+}

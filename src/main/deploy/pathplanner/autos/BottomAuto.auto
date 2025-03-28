@@ -1,0 +1,49 @@
+{
+  "version": "2025.0",
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "named",
+          "data": {
+            "name": "SetZeroPosition"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "BottomCoral"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "CoralPositionL2"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "PlaceBottomCoral"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "CoralDropOffL2"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "BottomMoveBackSafely"
+          }
+        }
+      ]
+    }
+  },
+  "resetOdom": true,
+  "folder": null,
+  "choreoAuto": false
+}

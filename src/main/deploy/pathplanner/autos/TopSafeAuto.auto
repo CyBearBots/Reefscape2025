@@ -1,0 +1,38 @@
+{
+  "version": "2025.0",
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "sequential",
+          "data": {
+            "commands": [
+              {
+                "type": "named",
+                "data": {
+                  "name": "SetZeroPositionArm"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "SetZeroPositionElevator"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "TopSafePath"
+          }
+        }
+      ]
+    }
+  },
+  "resetOdom": true,
+  "folder": "UsableAutos",
+  "choreoAuto": false
+}
